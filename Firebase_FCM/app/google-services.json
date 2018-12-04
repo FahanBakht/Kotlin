@@ -1,0 +1,174 @@
+{
+  "project_info": {
+    "project_number": "788642596779",
+    "firebase_url": "https://friendlychat-b50ea.firebaseio.com",
+    "project_id": "friendlychat-b50ea",
+    "storage_bucket": "friendlychat-b50ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788642596779:android:068c8c0d4a2681f5",
+        "android_client_info": {
+          "package_name": "com.example.farhan.campussystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788642596779-i9rrev4toci9hfrjl0hbot8hf7ildcn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farhan.campussystem",
+            "certificate_hash": "c4080a3baace7778e00c8078084b736969f95125"
+          }
+        },
+        {
+          "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMmxoN0BYe_Rmh2SU--4ZucmcJCgH02VI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788642596779:android:5bb03fd95cb8d0f5",
+        "android_client_info": {
+          "package_name": "com.example.farhan.parkingbookingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788642596779-ohgs6h9tknic223n510a28kmbapnurfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farhan.parkingbookingsystem",
+            "certificate_hash": "c4080a3baace7778e00c8078084b736969f95125"
+          }
+        },
+        {
+          "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMmxoN0BYe_Rmh2SU--4ZucmcJCgH02VI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788642596779:android:a0e6dd4a63496ce8",
+        "android_client_info": {
+          "package_name": "com.example.muhammadfarhan.firebasefcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMmxoN0BYe_Rmh2SU--4ZucmcJCgH02VI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788642596779:android:64e58dacc0483faa",
+        "android_client_info": {
+          "package_name": "com.google.firebase.udacity.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788642596779-ahuc60mp0hnrmaahnr61ucjkvrdpqkb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.friendlychat",
+            "certificate_hash": "c4080a3baace7778e00c8078084b736969f95125"
+          }
+        },
+        {
+          "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMmxoN0BYe_Rmh2SU--4ZucmcJCgH02VI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788642596779-mr3c5amlpq2eagq2hglq5rl2tdkl2gre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Auth Handler Java</string>
+    <!--
+     ADD FIRE BASE TO YOUR APP
+         1- Go to Firebase.com and Sign In
+         2- Click on Add Project and Create New Project by following their Guide
+         3- After Add Your Android Project on Your Firebase Project
+         4- Click on Add Project
+         5- Select Platform Android
+         6- Add your App Package Name and Nick Name then click on Register App
+         7- Download JSON and copy and paste in your App Directory in Android
+         8- Add their Dependency as shown in their Guide
+         9- Sync Now and Run your App To confirm complete Installation as shown in FireBase portal
+     -->
+
+    <!--
+     ADD GOOGLE FIREBASE AUTH TO YOUR APP
+         1. First, get your SHA-1 debug key :
+            1-Click on Gradle (From Right Side Panel, you will see Gradle Bar)
+            2-Click on Tasks
+            3-Click on Android
+            4-Double Click on signingReport (You will get SHA-1 and MD5)
+
+        2. Add new credentials to API Console
+            1-Go here https://console.developers.google.com/apis/credentials
+            2-Create new OAuth Client ID
+            3-Name : Android client (for debug) (example)
+            4-Signing-certificate fingerprint : Copy paste you SHA-1 debug key
+            5-Put your package name then saved
+
+        3. Add your key to your Firebase project :
+            1-Go to Project settings -> SHA certificate fingerprints -> Add SHA-1 key of debug app.
+            2-Then you can update your google-services.json file in your Android project.
+     -->
+
+    <!--
+     ADD FACEBOOK FIREBASE AUTH TO YOUR APP
+        Follow the steps as shown here
+            1- Facebook Official Docs:  https://developers.facebook.com/docs/facebook-login/android
+            2- FireBase Facebook Setup:  https://firebase.google.com/docs/auth/android/facebook-login
+            3- Other good site: https://www.mytrendin.com/firebase-authentication-using-facebook-login-android/
+     -->
+
+    <!--
+      ADD TWITTER FIREBASE AUTH TO YOUR APP
+        1- Add Dependency of Twitter
+        2- Sign In into your Twitter Developer Console
+        3- Make an Twitter App and Add all needed Information and check Read and Write if email is needed have to add All Url's then get email checkbox will open
+        4- Open Firebase go to Authentication and add Sign In method click on Twitter and add Api key and Api Key Secret from Your Twitter Developer console App.
+        5- Copy Firebase Callback url and past in your Twitter Developer Console App's Callback Methods and and as 2nd Callback add this = twittersdk://
+        6- If needed have to install Twitter App into your Device.
+     -->
+
+
+    <string name="logo_image">Logo image</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="txt_sign_up_now">Don\'t have an account? <font color='#26a69a'><b>Create One</b></font></string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="sign_in_via_firebase">Sign In Via Firebase</string>
+    <string name="sign_in_via_facebook">Sign In Via Facebook</string>
+    <string name="empty_edittext">This field can not be empty</string>
+    <string name="error_email_format">Email format is not correct</string>
+    <string name="password_less_digit_error">Password can\'t be less then 6 digits</string>
+    <string name="no_internet_connection_error">No internet connection is found please check your connection.</string>
+    <string name="please_wait">Loading Please Wait</string>
+    <string name="sign_in_successfully">Signed In Successfully</string>
+    <string name="error_while_sign_in">Error while Signing In User</string>
+    <string name="password_not_matched">Password does not match</string>
+    <string name="error_register_user">Error while Registering User</string>
+    <string name="error_in_geting_user_name">Error in retrieving user\'s information</string>
+    <string name="Auth_failed">Authentication failed.</string>
+    <string name="google_signIn_fail">Google sign in failed</string>
+    <string name="sign_in_via_twitter">Sign in via Twitter</string>
+    <string name="facebook_app_id">256258868351721</string>
+
+    <string name="twitter_key">SXM1dfjRmPbZH7AcQxckWJofY</string>
+    <string name="twitter_secret">LfXrlY2wadiMfbiH52nfKNAiNXA1TTfktKKlWyZJopoO3awxo3</string>
+
+</resources>

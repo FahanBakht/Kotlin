@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Firebase FCM</string>
+    <string name="notification_message">New Message From</string>
+</resources>

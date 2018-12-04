@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_15dp"
+            android:layout_marginEnd="@dimen/value_15dp"
+            android:layout_marginBottom="@dimen/value_10dp"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_sign_up_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/material_color_black_87_percent"
+                app:backgroundTint="@color/colorAccent"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_15dp"
+            android:layout_marginEnd="@dimen/value_15dp"
+            android:layout_marginBottom="@dimen/value_10dp"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_sign_up_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/material_color_black_87_percent"
+                app:backgroundTint="@color/colorAccent"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_15dp"
+            android:layout_marginTop="@dimen/value_5dp"
+            android:layout_marginEnd="@dimen/value_15dp"
+            android:layout_marginBottom="@dimen/value_15dp"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_sign_up_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:textColor="@color/material_color_black_87_percent"
+                app:backgroundTint="@color/colorAccent"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_15dp"
+            android:layout_marginTop="@dimen/value_5dp"
+            android:layout_marginEnd="@dimen/value_15dp"
+            android:layout_marginBottom="@dimen/value_15dp"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_sign_up_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textColor="@color/material_color_black_87_percent"
+                app:backgroundTint="@color/colorAccent"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_sing_up"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/value_50dp"
+            android:layout_marginStart="@dimen/value_90dp"
+            android:layout_marginTop="@dimen/value_10dp"
+            android:layout_marginEnd="@dimen/value_90dp"
+            android:background="@drawable/btn_ripple_accent_color"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textSize="@dimen/value_16sp" />
+
+        <TextView
+            android:id="@+id/goToSignInFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/value_15dp"
+            android:layout_marginBottom="@dimen/value_10dp"
+            android:text="@string/already_have_an_account"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</ScrollView>
