@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_list_view_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/card_view_properties"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/widget_list_item_view_movie_poster"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_150"
+        android:layout_weight="1"
+        android:contentDescription="@string/widget_poster_image" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_150"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/widget_tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_100"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:maxLines="6"
+            android:textColor="@color/white_light"
+            android:textSize="@dimen/size_14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/colorAccentDarker" />
+
+
+        <TextView
+            android:id="@+id/widget_tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:drawablePadding="@dimen/size_5"
+            android:drawableStart="@drawable/ic_star_half_small"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/size_14sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

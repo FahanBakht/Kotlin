@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_edit_profile_image"
+            android:layout_width="@dimen/size_120"
+            android:layout_height="@dimen/size_120"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/ic_launcher_background" />
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/material_color_white"
+                app:backgroundTint="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/material_color_white"
+                app:backgroundTint="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_profile_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_address"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/material_color_white"
+                app:backgroundTint="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_profile_contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone_no"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textColor="@color/material_color_white"
+                app:backgroundTint="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            app:hintTextAppearance="@style/EditTextLabel">
+
+            <EditText
+                android:id="@+id/et_profile_favorite_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/favorite_movie"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="@color/material_color_white"
+                app:backgroundTint="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_profile_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_70"
+            android:layout_marginStart="@dimen/margin_70"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/btn_ripple_accent_color"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/material_color_white"
+            android:textSize="@dimen/size_17_in_sp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_favorite_black"
+            android:title="@string/favorites" />
+        <item
+            android:id="@+id/nav_up_coming"
+            android:icon="@drawable/ic_up_coming_black"
+            android:title="@string/up_coming" />
+        <item
+            android:id="@+id/nav_top_rated"
+            android:icon="@drawable/ic_star_black"
+            android:title="@string/top_rated" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us_black"
+            android:title="@string/about_us" />
+
+        <item
+            android:enabled="false"
+            android:title="" />
+    </group>
+
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_log_out_black"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

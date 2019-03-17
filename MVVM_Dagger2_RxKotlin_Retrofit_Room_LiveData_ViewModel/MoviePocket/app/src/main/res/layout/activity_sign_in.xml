@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_10"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="@dimen/size_180"
+                android:layout_height="@dimen/size_150"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/dec_logo_image"
+                android:src="@drawable/logo" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/EditTextHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                app:hintTextAppearance="@style/EditTextLabel">
+
+                <EditText
+                    android:id="@+id/et_sign_in_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/material_color_white"
+                    app:backgroundTint="@color/colorAccent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/EditTextHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                app:hintTextAppearance="@style/EditTextLabel">
+
+                <EditText
+                    android:id="@+id/et_sign_in_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColor="@color/material_color_white"
+                    app:backgroundTint="@color/colorAccent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/btn_forget_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/forget_password"
+                android:textColor="@color/material_color_white_70_percent"
+                android:textSize="@dimen/material_typography_regular_button_text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_70"
+                android:layout_marginStart="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/btn_ripple_accent_color"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/material_color_white"
+                android:textSize="@dimen/size_17_in_sp" />
+
+            <TextView
+                android:id="@+id/btn_navigate_to_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/txt_sign_up_now"
+                android:textColor="@color/material_color_white_70_percent"
+                android:textSize="@dimen/material_typography_regular_button_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

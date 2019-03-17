@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "724115305655",
+    "firebase_url": "https://udacity-nanodegree-android-dev.firebaseio.com",
+    "project_id": "udacity-nanodegree-android-dev",
+    "storage_bucket": "udacity-nanodegree-android-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724115305655:android:897d34fd30907986",
+        "android_client_info": {
+          "package_name": "example.farhan.com.moviepocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724115305655-7nicm9s52h9q8utepa7218ie4uutdg28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "example.farhan.com.moviepocket",
+            "certificate_hash": "c4080a3baace7778e00c8078084b736969f95125"
+          }
+        },
+        {
+          "client_id": "724115305655-iegtu99chonkmc5ihg8k2ifqqtg4kdqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCoVzpcF8K6AByugEBhoWPuaSO8RaLvCA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724115305655-iegtu99chonkmc5ihg8k2ifqqtg4kdqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/widget_tool_bar"
+        android:elevation="@dimen/material_elevation_app_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/margin_5"
+            android:src="@mipmap/app_logo"
+            android:contentDescription="@string/widget_logo" />
+
+        <TextView
+            android:id="@+id/widget_tool_bar_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/size_8"
+            android:paddingTop="@dimen/size_8"
+            android:text="@string/ovie_pocket"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/size_25sp" />
+
+    </LinearLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/widget_margin">
+
+        <ListView
+            android:id="@+id/widget_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/widget_img_logo"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/widget_empty_view_image"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/widget_img_logo"
+                android:layout_centerInParent="true"
+                android:text="@string/there_are_no_favorite_movie_s"
+                android:textAlignment="center"
+                android:textColor="@color/material_color_white_70_percent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</LinearLayout>
+

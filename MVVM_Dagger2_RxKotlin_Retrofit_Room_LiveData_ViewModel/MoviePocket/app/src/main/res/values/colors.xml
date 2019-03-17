@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDarker1">#1d1d1d</color>
+    <color name="colorPrimaryDarker2">#161616</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#26a69a</color>
+    <color name="colorAccentLight">#20bcad</color>
+    <color name="colorAccentDark">#22968b</color>
+    <color name="colorAccentDarker">#197067</color>
+
+    <color name="ratingColorBackground">#FFE082</color>
+    <color name="ratingColorActive">#EDB842</color>
+    <color name="dividerColor">#8e8e8e</color>
+
+    <color name="transparent">#00000000</color>
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="white_light">#e2e2e2</color>
+    <color name="white_light_more">#c6c6c6</color>
+
+</resources>

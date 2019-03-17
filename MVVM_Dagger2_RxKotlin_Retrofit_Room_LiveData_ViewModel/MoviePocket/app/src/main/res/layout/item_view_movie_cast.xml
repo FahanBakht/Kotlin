@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cast_root_view"
+    android:layout_width="165dp"
+    android:layout_height="230dp"
+    android:layout_margin="@dimen/margin_5"
+    android:elevation="@dimen/material_elevation_card_resting"
+    app:cardBackgroundColor="@color/material_color_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/cast_item_view_image_loading_indicator"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/img_cast"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.85"
+                android:contentDescription="@string/cast_image"
+                android:foreground="?selectableItemBackground"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_cast_actor_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:textColor="@color/material_color_grey_900"
+                android:textSize="@dimen/size_15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

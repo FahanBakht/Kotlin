@@ -1,0 +1,10 @@
+<resources>
+    <item name="ic_home_black" type="drawable">@drawable/ic_home_black</item>
+    <item name="ic_search" type="drawable">@drawable/ic_search</item>
+    <item name="ic_person_black" type="drawable">@drawable/ic_person_black</item>
+    <item name="ic_favorite_black" type="drawable">@drawable/ic_favorite_black</item>
+    <item name="ic_up_coming_black" type="drawable">@drawable/ic_up_coming_black</item>
+    <item name="ic_star_black" type="drawable">@drawable/ic_star_black</item>
+    <item name="ic_about_us_black" type="drawable">@drawable/ic_about_us_black</item>
+    <item name="ic_log_out_black" type="drawable">@drawable/ic_log_out_black</item>
+</resources>
