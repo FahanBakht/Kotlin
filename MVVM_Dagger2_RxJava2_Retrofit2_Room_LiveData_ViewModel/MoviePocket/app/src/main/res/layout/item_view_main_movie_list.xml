@@ -1,0 +1,85 @@
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_4"
+        android:clickable="true"
+
+        app:cardElevation="10dp"
+        android:focusable="true" tools:targetApi="lollipop">
+
+    <LinearLayout
+            android:id="@+id/short_movie_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_2">
+
+            <TextView
+                    android:id="@+id/movie_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_15sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/movie_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/margin_2"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/movie_tittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/margin_50"
+                    android:paddingEnd="@dimen/margin_50"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_25sp"
+                    android:maxLines="3"
+                    android:visibility="gone"
+                    android:textStyle="bold"/>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/item_view_image_loading_indicator"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/colorAccent"
+                    app:indicatorName="BallSpinFadeLoaderIndicator"/>
+
+
+            <com.farhan.moviepocket.utils.DynamicHeightImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

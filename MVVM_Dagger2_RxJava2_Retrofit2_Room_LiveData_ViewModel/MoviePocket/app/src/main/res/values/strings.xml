@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Movie Pocket</string>
+    <string name="search">Search</string>
+    <string name="network_error">Error: No network found</string>
+</resources>
