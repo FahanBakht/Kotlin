@@ -1,4 +1,4 @@
-package com.farhan.moviepocket.dagger2.di
+package com.farhan.moviepocket.di.module
 
 import dagger.Module
 import android.app.Application

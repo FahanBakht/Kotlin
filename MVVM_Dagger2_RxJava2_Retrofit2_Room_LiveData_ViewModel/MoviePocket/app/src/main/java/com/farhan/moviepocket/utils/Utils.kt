@@ -7,6 +7,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.util.Base64
 import android.widget.Toast
+import java.io.ByteArrayOutputStream
 
 object Utils {
 
@@ -16,6 +17,14 @@ object Utils {
             toast!!.cancel()
         toast = Toast.makeText(context, message, Toast.LENGTH_SHORT)
         toast!!.show()
+    }
+
+    // Helper method to convert image into to byte to save in database
+    fun toByte(bitmap: Bitmap): String {
+        val stream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+        val image = stream.toByteArray()
+        return Base64.encodeToString(image, Base64.DEFAULT)
     }
 
     fun convertBase64ToBitmap(base64String: String): Bitmap {

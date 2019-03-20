@@ -1,4 +1,4 @@
-package com.farhan.moviepocket.dagger2.di
+package com.farhan.moviepocket.di.module
 
 import dagger.Module
 import dagger.Provides
@@ -33,4 +33,5 @@ class RoomModule(mApplication: Application) {
     fun movieRepository(movieDao: MovieDao): MovieRepository {
         return MovieRepository(movieDao)
     }
+
 }

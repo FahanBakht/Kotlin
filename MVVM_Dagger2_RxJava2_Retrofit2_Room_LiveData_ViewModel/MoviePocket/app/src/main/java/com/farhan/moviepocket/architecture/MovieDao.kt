@@ -11,9 +11,15 @@ import com.farhan.moviepocket.model.Data
 interface MovieDao {
 
     @Query("SELECT * FROM movie")
-    fun loadAllMovies(): LiveData<List<Data>>
+    fun loadAllMovies(): List<Data>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertProduct(data: Data)
+
+    @Query("SELECT COUNT(*) FROM movie")
+    fun getTotalMoviesCount():Int
+
+    @Query("DELETE FROM movie")
+    fun deleteAllMovies()
 
 }

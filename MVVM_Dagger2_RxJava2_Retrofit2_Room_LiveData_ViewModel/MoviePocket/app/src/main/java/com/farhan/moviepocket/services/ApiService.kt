@@ -2,6 +2,7 @@ package com.farhan.moviepocket.services
 
 import com.farhan.moviepocket.model.Movie
 import com.farhan.moviepocket.utils.Constants
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -10,7 +11,7 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("movies")
-    fun getMovies(): Single<Movie>
+    fun getMovies(): Observable<Movie>
 
     companion object {
         fun create(): ApiService {

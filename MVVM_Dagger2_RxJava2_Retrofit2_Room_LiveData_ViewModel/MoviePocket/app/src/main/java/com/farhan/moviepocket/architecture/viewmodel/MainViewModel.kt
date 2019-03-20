@@ -4,9 +4,23 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModel
 import com.farhan.moviepocket.architecture.repository.MovieRepository
 import com.farhan.moviepocket.model.Data
+import timber.log.Timber
 
-class MainViewModel constructor(movieRepository: MovieRepository) : ViewModel() {
+class MainViewModel constructor(val movieRepository: MovieRepository) : ViewModel() {
 
-    var getMovieLiveDataList: LiveData<List<Data>> = movieRepository.movieLiveDataList
+    var movieArrayList: LiveData<List<Data>>? = null
 
+    init {
+        Timber.e("MainViewModel init")
+        movieArrayList = getMovieLiveDataList()
+    }
+
+    private fun getMovieLiveDataList(): LiveData<List<Data>>{
+        Timber.e("getMovieLiveDataList()")
+        if (movieArrayList == null){
+            Timber.e("getMovieLiveDataList() If")
+            movieArrayList = movieRepository.getAllMovies()
+        }
+        return movieArrayList!!
+    }
 }
