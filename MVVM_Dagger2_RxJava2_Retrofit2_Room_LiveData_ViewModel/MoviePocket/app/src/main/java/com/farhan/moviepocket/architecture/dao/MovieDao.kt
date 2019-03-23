@@ -1,4 +1,4 @@
-package com.farhan.moviepocket.architecture
+package com.farhan.moviepocket.architecture.dao
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.Dao
@@ -11,10 +11,10 @@ import com.farhan.moviepocket.model.Data
 interface MovieDao {
 
     @Query("SELECT * FROM movie")
-    fun loadAllMovies(): List<Data>
+    fun loadAllMovies(): LiveData<List<Data>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertProduct(data: Data)
+    fun insertProduct(data: List<Data>)
 
     @Query("SELECT COUNT(*) FROM movie")
     fun getTotalMoviesCount():Int

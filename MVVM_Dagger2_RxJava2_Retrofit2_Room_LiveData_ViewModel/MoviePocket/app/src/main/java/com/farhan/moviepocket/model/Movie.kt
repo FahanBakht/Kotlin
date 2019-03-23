@@ -10,11 +10,9 @@ data class Movie(
 @Entity(tableName = "movie")
 data class Data(
     val genre: String,
-    @PrimaryKey(autoGenerate = true)
-    val roomId :Int,
+    @PrimaryKey
     val id: Int,
     val poster: String,
     val title: String,
-    val year: String,
-    var imgBase64: String
+    val year: String
 )

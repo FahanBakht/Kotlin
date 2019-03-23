@@ -163,4 +163,10 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>(), Filterab
         this.moviesArrayList = moviesArrayList
         notifyDataSetChanged()
     }
+
+    fun clearMoviesData() {
+        this.moviesArrayList.clear()
+        notifyDataSetChanged()
+    }
+
 }

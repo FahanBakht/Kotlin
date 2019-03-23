@@ -5,8 +5,8 @@ import dagger.Provides
 import javax.inject.Singleton
 import android.arch.persistence.room.Room
 import android.app.Application
-import com.farhan.moviepocket.architecture.AppDatabase
-import com.farhan.moviepocket.architecture.MovieDao
+import com.farhan.moviepocket.architecture.database.AppDatabase
+import com.farhan.moviepocket.architecture.dao.MovieDao
 import com.farhan.moviepocket.architecture.repository.MovieRepository
 import com.farhan.moviepocket.utils.Constants.ROOM_DB_NAME
 
@@ -30,8 +30,8 @@ class RoomModule(mApplication: Application) {
 
     @Singleton
     @Provides
-    fun movieRepository(movieDao: MovieDao): MovieRepository {
-        return MovieRepository(movieDao)
+    fun movieRepository(movieDao: MovieDao, mApplication: Application): MovieRepository {
+        return MovieRepository(movieDao,mApplication)
     }
 
 }

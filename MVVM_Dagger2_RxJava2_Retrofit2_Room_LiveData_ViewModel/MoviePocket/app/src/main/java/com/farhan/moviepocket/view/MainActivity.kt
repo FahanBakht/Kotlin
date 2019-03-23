@@ -20,58 +20,76 @@ import com.farhan.moviepocket.utils.Utils.calculateNoOfColumns
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import android.arch.lifecycle.ViewModelProviders
-import androidx.work.*
+import android.support.annotation.NonNull
+import android.support.annotation.Nullable
 import com.farhan.moviepocket.architecture.repository.MovieRepository
 import com.farhan.moviepocket.architecture.viewmodel.MainViewModelFactory
-import com.farhan.moviepocket.architecture.workmanager.SyncWorker
 import com.farhan.moviepocket.di.components.DaggerAppComponent
 import com.farhan.moviepocket.model.Data
-import com.farhan.moviepocket.utils.Constants.ONE_TIME_WORK
+import com.farhan.moviepocket.utils.Utils
+import android.support.test.espresso.IdlingResource
+import android.support.annotation.VisibleForTesting
+import com.farhan.moviepocket.idlingResource.SimpleIdlingResource
 
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var movieRepository : MovieRepository
+    lateinit var movieRepository: MovieRepository
     private var disposable: CompositeDisposable = CompositeDisposable()
     private lateinit var mAdapter: MoviesAdapter
+    // The Idling Resource which will be null in production.
+    @Nullable
+    private var mIdlingResource: SimpleIdlingResource? = null
+
+    @VisibleForTesting
+    @NonNull
+    fun getIdlingResource(): IdlingResource {
+        if (mIdlingResource == null) {
+            mIdlingResource = SimpleIdlingResource()
+        }
+        return mIdlingResource!!
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        DaggerAppComponent.builder().roomModule(RoomModule(application)).appModule(
-            AppModule(
-                application
-            )
-        ).build()
+        DaggerAppComponent.builder().roomModule(RoomModule(application)).appModule(AppModule(application)).build()
             .inject(this)
-        val factory  = MainViewModelFactory(movieRepository)
-        val mainViewModel = ViewModelProviders.of(this,factory).get(MainViewModel::class.java)
+        val factory = MainViewModelFactory(movieRepository)
 
-        runSyncWorker()
+        val mainViewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
+
         initViews()
         setUpRecyclerView()
 
-        mainViewModel.movieArrayList!!.observe(this@MainActivity, Observer<List<Data>>{
-            Timber.e("Observe runs Total: ${movieRepository.getTotalCount()}")
+        observeLiveData(mainViewModel)
 
+        // SwipeRefreshLayout Event
+        swipe_refresh_layout.setOnRefreshListener {
+            if (Utils.isNetworkAvailable(application)) {
+                mainViewModel.clearMoviesList()
+                mAdapter.clearMoviesData()
+
+                observeLiveData(mainViewModel)
+
+            } else {
+                swipe_refresh_layout.isRefreshing = false
+                Utils.showToast(application, "Can't process This Operation reburies network connection.")
+            }
+        }
+    }
+
+    private fun observeLiveData(mainViewModel: MainViewModel) {
+        mainViewModel.getMovieLiveDataList()?.observe(this@MainActivity, Observer<List<Data>> {
+            if (mIdlingResource != null) {
+                mIdlingResource!!.setIdleState(true)
+            }
+            Timber.e("Observe runs Total: ${movieRepository.getTotalCount()}")
             loading_indicator.visibility = View.GONE
             swipe_refresh_layout.isRefreshing = false
             val mList = ArrayList<Data>(it!!)
             mAdapter.setMovieData(mList)
         })
-    }
-
-    private fun runSyncWorker(){
-        val myConstraints = Constraints.Builder()
-            .setRequiredNetworkType(NetworkType.CONNECTED)
-            .build()
-
-        val syncWorkRequest = OneTimeWorkRequestBuilder<SyncWorker>().setConstraints(myConstraints).build()
-        WorkManager.getInstance().enqueueUniqueWork(ONE_TIME_WORK, ExistingWorkPolicy.KEEP, syncWorkRequest)
-        WorkManager.getInstance().getWorkInfoByIdLiveData(syncWorkRequest.id)
-            .observe(this@MainActivity, Observer { workInfo ->
-                Timber.e("SyncWorker Observer Runs $workInfo")
-            })
     }
 
     private fun initViews() {
@@ -82,11 +100,6 @@ class MainActivity : AppCompatActivity() {
         appBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
             toolbar_title.alpha = 1.0f - Math.abs(verticalOffset / appBarLayout.totalScrollRange.toFloat())
         })
-
-        // SwipeRefreshLayout Event
-        swipe_refresh_layout.setOnRefreshListener {
-
-        }
     }
 
     private fun setUpRecyclerView() {
@@ -106,6 +119,7 @@ class MainActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String): Boolean {
                 return false
             }
+
             override fun onQueryTextChange(newText: String): Boolean {
                 mAdapter.filter.filter(newText)
                 return true

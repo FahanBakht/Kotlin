@@ -1,7 +1,8 @@
-package com.farhan.moviepocket.architecture
+package com.farhan.moviepocket.architecture.database
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
+import com.farhan.moviepocket.architecture.dao.MovieDao
 import com.farhan.moviepocket.model.Data
 import com.farhan.moviepocket.utils.Constants.ROOM_VERSION
 

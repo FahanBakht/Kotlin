@@ -6,21 +6,25 @@ import com.farhan.moviepocket.architecture.repository.MovieRepository
 import com.farhan.moviepocket.model.Data
 import timber.log.Timber
 
-class MainViewModel constructor(val movieRepository: MovieRepository) : ViewModel() {
+class MainViewModel constructor(private val movieRepository: MovieRepository) : ViewModel(){
 
     var movieArrayList: LiveData<List<Data>>? = null
 
     init {
         Timber.e("MainViewModel init")
-        movieArrayList = getMovieLiveDataList()
+        movieArrayList = movieRepository.loadMovies()
     }
 
-    private fun getMovieLiveDataList(): LiveData<List<Data>>{
+    fun getMovieLiveDataList(): LiveData<List<Data>>? {
         Timber.e("getMovieLiveDataList()")
-        if (movieArrayList == null){
+        if (movieArrayList == null) {
             Timber.e("getMovieLiveDataList() If")
-            movieArrayList = movieRepository.getAllMovies()
+            movieArrayList = movieRepository.loadMovies()
         }
-        return movieArrayList!!
+        return movieArrayList
+    }
+
+    fun clearMoviesList() {
+        this.movieArrayList = null
     }
 }
