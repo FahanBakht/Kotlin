@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="save">Save</string>
+    <string name="enter_value">Enter Value</string>
+</resources>
